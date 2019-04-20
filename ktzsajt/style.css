@@ -1,0 +1,33 @@
+*,* :before, *:after {
+    box-sizing: border-box;
+    }
+   :root {
+    --crvena:#c81b37;
+    }   
+    html, body {
+        margin:0;
+        font:1em/1.5 'Roboto',sans-serif;
+        height: 100%;
+        width: 100%
+    }
+    .container {
+        display:grid;
+        grid-template-columns:[first-col] 1fr [second-col] 1fr;
+        grid-template-rows:[first-row] 3.5em [second-row] 3fr [third-row] 1fr;
+        height: 100%;
+        width: 100%;
+    }
+    header {
+        grid-row: first-row; 
+        grid-column: first-col / span 2;
+        background-color: var(--crvena);
+    }
+    article {
+        grid-row: second-row;
+        grid-column: first-col / span 2;
+        background-color:#fff;
+    }
+    footer {
+        grid-row: third-row;
+        grid-column: first-col / span 2;
+    }
