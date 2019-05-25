@@ -5,23 +5,40 @@
     --crvena:#c81b37;
     }   
     html, body {
-        margin:0;
         font:1em/1.5 'Roboto',sans-serif;
         height: 100%;
         width: 100%;
+        margin:0 auto;
     }
-    .container {
+    a {
+        text-decoration: none;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+    }
+    .grid {
         display:grid;
-        grid-template-columns:[first-col] 1fr [second-col] 1fr;
+        grid-template-columns:[first-col] 1fr [second-col] 1fr; 
         grid-template-rows:[first-row] 3.5em [second-row] 3fr [third-row] 1fr;
         grid-gap:1em;
         height: 100%;
-        width: 80%;
+        width: 90%;
+        margin:0 auto;
     }
     header {
+        height:3.5em;
+        background-color: var(--crvena);
+        grid-column:first-col / span 2;
+    }
+    .header {
+        height: 3.5em;
+        width: 100%;
         grid-row: first-row; 
         grid-column: first-col / span 2;
         background-color: var(--crvena);
+        display:inline-flex;
+        justify-content: space-between;
     }
     article {
         grid-row: second-row;
@@ -31,4 +48,60 @@
     footer {
         grid-row: third-row;
         grid-column: first-col / span 2;
+    }
+    .inline-flex{
+        display:inline-flex;
+    }
+    .ktzlogo{
+        width:1.5em;
+        height: 1.5em;
+    }
+    .ktz-text{
+        display:inline;
+        font-weight:700;
+    }
+    .translate{
+        width:1.5em;
+        height: 1.5em;
+    }
+    .nav-button{
+        width:1.5em;
+        height: 1.5em;
+    }
+    .ktz-header{
+        color:#fff;
+    }
+    .smislice-se{
+        margin-right:0.25em;
+    }
+    .header-left{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-right{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-header{
+        margin-left:0.75em;
+    }
+    h1{
+        color: var(--crvena);
+        font-size: 3em;
+        font-weight: 700;
+    }
+    h2{
+        font-weight:500;
+    }
+    .smislicem {
+        color: var(--crvena);
+    }
+    .nzm{
+        text-decoration:underline;
+        color: var(--crvena)
+    }
+    .tekst{
+        font-size:1.5em;
     }
